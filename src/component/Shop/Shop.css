@@ -1,0 +1,41 @@
+.shop{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.order-summery{
+    height: 944px;
+    background-color: rgba(255, 153, 0, 0.30);
+    color: #2A414F;
+    font-size: 17px;
+    font-family: 'Lato';
+    padding: 0px 23px;
+}
+.os{
+    text-align: center;
+    font-size: 25px;
+}
+.delete-cart{
+    font-size: 17px;
+    letter-spacing: 0.085px;
+    background-color: #FF3030;
+    color: #FFF;
+    border-radius: 4px;
+    padding: 13px 65px;
+    margin-bottom: 16px;
+    border: 1px solid;
+}
+
+.review-cart{
+    font-size: 17px;
+    letter-spacing: 0.085px;
+    background-color: #F90;
+    color: #FFF;
+    border: 4px;
+    border-radius: 4px;
+    padding: 13px 53px;
+}
+
+.product img{
+    width: 286px;
+    height: 286px;
+}
