@@ -9,3 +9,31 @@
     padding: 10px;
     margin: 20px;
 }
+.cart-container{
+    height: 944px;
+    background-color: #f899094d;
+    color: #2A414F;
+    font-size: 17px;
+    font-family: 'Lato';
+    padding: 0px 23px;
+}
+.delete-cart{
+    font-size: 17px;
+    letter-spacing: 0.085px;
+    background-color: #FF3030;
+    color: #FFF;
+    border-radius: 4px;
+    padding: 13px 65px;
+    margin-bottom: 16px;
+    border: 1px solid;
+}
+
+.review-cart{
+    font-size: 17px;
+    letter-spacing: 0.085px;
+    background-color: #F90;
+    color: #FFF;
+    border: 4px;
+    border-radius: 4px;
+    padding: 13px 53px;
+}

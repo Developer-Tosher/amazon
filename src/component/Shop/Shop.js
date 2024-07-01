@@ -1,8 +1,10 @@
 import React from 'react';
 import './Shop.css'
-
-const Shop = (props) => {
-    const {name,seller, price, img, ratings} = props.product;
+                // replace 'props' perameter with {product, handleAddToCart} 
+const Shop = ({product, handleAddToCart}) => {
+    // const {product, handleAddToCart} = props;
+    const {name,seller, price, img, ratings} = product;
+// console.log(props);
     return (
         <div className='shop'>
             <img src={img} alt='' />
@@ -13,7 +15,7 @@ const Shop = (props) => {
                 <p>Ratting: {ratings} star</p>
                 {/* <h3>Name: {props.product.name}</h3> */}
             </div>
-            <button className='button-cart'>Add To Cart</button>
+            <button onClick={()=>handleAddToCart(product)}  className='button-cart'>Add To Cart</button>
         </div>
     );
 };
