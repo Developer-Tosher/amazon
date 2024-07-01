@@ -1,12 +1,13 @@
+import logo from './logo.svg';
 import './App.css';
+import Product from './component/Product/Product';
 import Header from './component/Header/Header';
-import Shop from './component/Shop/Shop';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Shop></Shop>
+      <Product></Product>
     </div>
   );
 }

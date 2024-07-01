@@ -1,37 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import './Shop.css';
-import Products from '../Products/Products';
+import React from 'react';
+import './Shop.css'
 
-const Shop = () => {
-    const [product, setProduct] = useState([]);
-
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProduct(data))
-            .catch(error => console.error('Error fetching products:', error));
-    }, []);
-
+const Shop = (props) => {
+    const {name,seller, price, img, ratings} = props.product;
     return (
         <div className='shop'>
-            <div className='product'>
-                {/* <h2>seller name: {product.length}</h2> */}
-                {
-                    product.map((productItem, id) => (
-                        <Products key={id} product={productItem} />
-                    ))
-                }
+            <img src={img} alt='' />
+            <div className='shop-info'>
+                <h4 className='product-name'>{name}</h4>
+                <h4 className='shoe-price'>$ Price: {price}</h4>
+                <p>Manufacturer: {seller}</p>
+                <p>Ratting: {ratings} star</p>
+                {/* <h3>Name: {props.product.name}</h3> */}
             </div>
-            <div className='order-summary'>
-                <h3 className='os'>Order Summary</h3>
-                <p>Selected Item: </p>
-                <p>Total Price: $</p>
-                <p>Total Shopping Charge:</p>
-                <p>Tax: $</p>
-
-                <button className='delete-cart'>Clear Cart</button>
-                <button className='review-cart'>Review Order</button>
-            </div>
+            <button className='button-cart'>Add To Cart</button>
         </div>
     );
 };
